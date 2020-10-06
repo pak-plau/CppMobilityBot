@@ -53,7 +53,7 @@ void Robot::AutonomousInit() {
 }
 
 void Robot::AutonomousPeriodic() {
-  if(timer.Get() == units::seconds_t(1.0))
+  if(timer.Get() >= units::seconds_t(1.0))
   {
     motors.TankDrive(0,0);
   }
